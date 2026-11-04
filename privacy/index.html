@@ -1,31 +1,36 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Policy · EaseAbroad</title><link rel="stylesheet" href="/style.css"><link rel="icon" href="/icon.png"></head><body>
 <header><img src="/icon.png" alt=""><a href="/">EaseAbroad</a></header><main>
-<h1>Privacy Policy</h1><p class="muted">Effective date: October 15, 2026 · Controller: Jean Lucas Monte Carvalho, Brossard, Quebec, Canada · Contact: <a href="mailto:support@easeabroad.app">support@easeabroad.app</a></p>
+<h1>Privacy Policy</h1><p class="muted">Effective date: November 4, 2026 · Controller: Jean Lucas Monte Carvalho, Brossard, Quebec, Canada · Contact: <a href="mailto:support@easeabroad.app">support@easeabroad.app</a></p>
 <p>EaseAbroad ("we") is a travel-guide app. This policy explains what data we process, why, and your choices. We do not sell your personal data and we do not show third-party ads.</p>
 <h2>1. Data we collect</h2>
 <ul>
-<li><strong>Account:</strong> name, email address, password (stored only as a salted hash), email-verification status.</li>
-<li><strong>Location:</strong> your device's precise location while you use the map or a guided tour, to find nearby places and trigger tour stops. Location is sent to our server only as coordinates in a request for nearby places/tours; we don't store a location history linked to your account. Tour progress is kept on your device.</li>
-<li><strong>Content you create:</strong> trips/itineraries, places you add, people you share trips with (their email), travel preferences, language and app settings.</li>
+<li><strong>Account:</strong> name, email address, password (stored only as a salted bcrypt hash; only if you use email sign-in), email-verification status, and your role (regular or travel-agency account).</li>
+<li><strong>Sign-in with Google, Facebook or Apple:</strong> if you use one, we receive from that provider your account ID, name, email address (Apple may give a private relay address) and whether the email is verified, and for Google your profile photo URL. We never receive your provider password. Facebook Login uses the Facebook SDK in the app; we turned off its automatic app-event logging and advertising-ID collection.</li>
+<li><strong>Location:</strong> your device's precise location while you use the map or a guided tour, to find nearby places and trigger tour stops. Location is sent to our server only as coordinates in a request for nearby places/tours; we don't store a location history linked to your account. Tour progress is kept on your device. Coordinates are also sent (rounded to city level for events) to find events for your trip days.</li>
+<li><strong>Content you create:</strong> trips/itineraries, places you add, custom day names, arrival times, people you share or co-edit trips with (their email and account ID), and travel preferences used for AI trip planning (e.g. interests, pace, budget), language and app settings. Gifted trips: a travel-agency account can gift a trip to a client by email. The client becomes the owner and the agency stays on the trip as a collaborator who can view and edit it. If the client has no account yet, we keep the client's email on the trip until they sign up or sign in with that verified email.</li>
+<li><strong>Voice tours:</strong> spoken narration uses your device's built-in text-to-speech; no audio is recorded or sent to us.</li>
 <li><strong>Purchases:</strong> subscription product, status and expiry, and the store reference for the purchase (Google Play purchase token and order ID, or Apple App Store transaction and original transaction IDs). Payments are processed by Google Play or the Apple App Store; we never see your card details.</li>
-<li><strong>Usage counters:</strong> daily counts of AI insights/recommendations, to enforce free-plan limits.</li>
+<li><strong>Usage counters:</strong> daily counts of AI insights/recommendations, AI trip plans and tours, to enforce free-plan limits.</li>
 <li><strong>Diagnostics:</strong> crash reports and error logs (device model, OS version, app version, stack traces), and server logs including IP address, used for security and rate limiting.</li>
 </ul>
 <h2>2. How we use it</h2>
-<p>To provide the app (nearby places, guides, tours, trips, sharing), operate your account and subscription, keep the service secure and prevent abuse, fix bugs, and contact you about your account (e.g. verification and password-reset emails). Legal bases: performance of our contract with you, our legitimate interests (security, improvement), and your consent for location access (you can revoke it in your device settings).</p>
+<p>To provide the app (nearby places, guides, tours, trips, sharing), operate your account and subscription, keep the service secure and prevent abuse, fix bugs, and contact you about your account (e.g. verification and password-reset emails). We don't use your data for advertising and we don't sell it. Legal bases: performance of our contract with you, our legitimate interests (security, improvement), and your consent for location access (you can revoke it in your device settings).</p>
 <h2>3. Service providers</h2>
 <ul>
-<li><strong>Apple</strong> — Apple App Store (in-app subscription billing on iOS); we receive transaction and subscription-status notifications from Apple. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
-<li><strong>Google</strong> — Google Play (billing on Android), Google Maps SDK/JavaScript API (map display; Google may receive your IP and map viewport). <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li><strong>Apple</strong> — Apple App Store (in-app subscription billing on iOS) and Sign in with Apple; we receive transaction and subscription-status notifications from Apple. <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
+<li><strong>Google</strong> — Google Play (billing on Android), Google Sign-In, and Google Maps SDK/JavaScript API (map display; Google may receive your IP and map viewport). <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li><strong>Meta (Facebook)</strong> — Facebook Login. <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</li>
 <li><strong>Amazon Web Services</strong> — hosting and database.</li>
-<li><strong>AI provider (OpenRouter and the model providers it routes to)</strong> — receives place names and public Wikipedia text to write guide narration. We don't send your name, email or account data.</li>
+<li><strong>AI provider (OpenRouter and the model providers it routes to)</strong> — receives place names and public Wikipedia text to write guide narration, and for AI trip planning the trip's destination, dates, number of days, the places on the trip and the preferences you pick. We don't send your name, email or account ID.</li>
+<li><strong>Ticketmaster (Discovery API)</strong> — our server asks for public events near a city and date; we don't send your identity. <a href="https://privacy.ticketmaster.com/privacy-policy">Ticketmaster Privacy Policy</a>.</li>
+<li><strong>Geoapify and OpenStreetMap Nominatim</strong> — place search and geocoding; our server sends search text and coordinates, not your identity.</li>
 <li><strong>OpenStreetMap / Overpass, Wikipedia / Wikidata, Wikimedia Commons</strong> — public data queried by our server about places (not about you).</li>
 <li><strong>Sentry</strong> — crash and error reporting.</li>
 <li><strong>Email provider</strong> — sends account emails.</li>
 </ul>
 <h2>4. Retention</h2>
-<p>Account data is kept while your account exists. When you delete your account we delete your profile, trips, preferences, subscription record and usage counters immediately; backups and logs expire within 30 days. Cached public place information is not personal data.</p>
+<p>Account data is kept while your account exists. When you delete your account we delete your profile, trips, preferences, subscription record and usage counters immediately; backups and logs expire within 30 days. Trips you gifted to a client belong to the client after transfer. Cached public place information is not personal data.</p>
 <h2>5. Your rights and choices</h2>
 <p>You can access and edit your data in the app, export it on request, and <a href="https://easeabroad.app/delete-account/">delete your account</a> at any time (in the app: Profile → Delete account). Depending on where you live you may also have rights to object, restrict processing, and complain to a data-protection authority (for example the Commission d'accès à l'information du Québec, the Office of the Privacy Commissioner of Canada, or your local authority in the EU, UK or Brazil). Contact <a href="mailto:support@easeabroad.app">support@easeabroad.app</a>.</p>
 <h2>6. Security</h2><p>Data is encrypted in transit (HTTPS) and at rest on our hosting provider. Passwords are hashed with bcrypt.</p>
