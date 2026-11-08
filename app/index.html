@@ -13,13 +13,16 @@
     <meta name="theme-color" content="#4B39C8" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1A1640" media="(prefers-color-scheme: dark)" />
     <title>EaseAbroad</title>
-    <script>if(window.navigator.standalone){document.documentElement.classList.add('ios-standalone');}</script>
+    <script>if(window.navigator.standalone){document.documentElement.classList.add('ios-standalone');}window.addEventListener('focusout',function(){window.scrollTo(0,0);});</script>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
       html,
       body {
         height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         background-color: #4B39C8;
       }
       @media (prefers-color-scheme: dark) {
@@ -32,14 +35,21 @@
       body {
         overflow: hidden;
       }
-      /* These styles make the root element full-height */
+      /* Pin full-height root layout: notch safe area at top, flush to bottom */
       #root {
+        position: absolute;
+        top: env(safe-area-inset-top, 0px);
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
-        height: 100%;
+        flex-direction: column;
+      }
+      #root, #root > div, #root > div > div {
+        display: flex;
         flex: 1;
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
-        box-sizing: border-box;
+        flex-direction: column;
+        height: 100%;
       }
     </style>
 <meta name="description" content="Plan trips, pick places, and see events near you.">
