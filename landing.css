@@ -47,3 +47,67 @@
 .features .feature .phone img{display:block;width:100%;max-width:none;height:auto;aspect-ratio:auto 9/16;object-fit:contain;margin:0;border:0;border-radius:0;background:none;box-shadow:none}
 }
 @media (max-width:820px) and (prefers-color-scheme:dark){.features .feature .phone{box-shadow:0 0 0 1px rgba(255,255,255,.16),0 14px 30px rgba(0,0,0,.45)}}
+
+/* Standalone PWA & iOS status bar inheritance */
+@media all and (display-mode: standalone) {
+  html {
+    background-color: #FF5F4A;
+  }
+  .lp header {
+    background: var(--grad);
+    padding-top: calc(16px + env(safe-area-inset-top));
+    padding-bottom: 16px;
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+    color: #fff;
+  }
+  .lp header a {
+    color: #fff;
+  }
+  .lp header nav a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .lp header nav a.login {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .lp main, .lp footer {
+    background: var(--bg);
+  }
+}
+@media all and (display-mode: standalone) and (prefers-color-scheme: dark) {
+  html {
+    background-color: #1A1640;
+  }
+}
+.ios-standalone html {
+  background-color: #FF5F4A;
+}
+@media (prefers-color-scheme: dark) {
+  .ios-standalone html {
+    background-color: #1A1640;
+  }
+}
+.ios-standalone .lp header {
+  background: var(--grad);
+  padding-top: calc(16px + env(safe-area-inset-top));
+  padding-bottom: 16px;
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+  color: #fff;
+}
+.ios-standalone .lp header a {
+  color: #fff;
+}
+.ios-standalone .lp header nav a {
+  color: rgba(255, 255, 255, 0.9);
+}
+.ios-standalone .lp header nav a.login {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+}
+.ios-standalone .lp main, .ios-standalone .lp footer {
+  background: var(--bg);
+}
