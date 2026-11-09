@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>EaseAbroad · Your pocket travel guide</title>
-<meta name="description" content="EaseAbroad narrates the places around you, walks you through self-guided audio tours and puts every sight on one map. Open the web app, or coming soon to Google Play.">
-<meta property="og:title" content="EaseAbroad · Your pocket travel guide">
-<meta property="og:description" content="Location-based audio stories, guided walking tours and a map-first travel guide.">
+<title>EaseAbroad · AI Trip Planner, Live Events, Audio Tours &amp; Agency Gifting</title>
+<meta name="description" content="Plan day-by-day trips with AI, catch live concerts and sports via Ticketmaster &amp; SeatGeek, walk self-guided GPS audio tours, and gift client itineraries as a travel agency.">
+<meta property="og:title" content="EaseAbroad · Your pocket travel guide &amp; trip planner">
+<meta property="og:description" content="AI day-by-day trip plans, live events matched to your travel dates, hands-free audio walking tours, and trip gifting for travel agencies.">
 <meta property="og:image" content="https://easeabroad.app/img/hero.jpg">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -14,82 +14,260 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#FF5F4A" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1A1640" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#3B2AA0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0A1C" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/icon.png">
-<link rel="stylesheet" href="/style.css?v=8">
-<link rel="stylesheet" href="/landing.css?v=8">
+<link rel="stylesheet" href="/style.css?v=9">
+<link rel="stylesheet" href="/landing.css?v=9">
 <script>if(window.navigator.standalone){document.documentElement.classList.add('ios-standalone');}</script>
 <script type="text/javascript">(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A8155761-724e-4732-8401-726bf42618a71.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');</script>
 </head>
 <body class="lp">
 <header>
-  <a class="brand" href="/"><img src="/icon.png" alt="">EaseAbroad</a>
-  <nav>
-    <a href="#features">Features</a>
-    <a href="mailto:support@easeabroad.app">Contact</a>
+  <a class="brand" href="/"><img src="/icon.png" alt="EaseAbroad logo"><span>EaseAbroad</span></a>
+  <nav aria-label="Primary">
+    <a class="nav-link" href="#features">Features</a>
+    <a class="nav-link" href="#events">Live Events</a>
+    <a class="nav-link" href="#tours">Audio Tours</a>
+    <a class="nav-link" href="#agencies">For Agencies</a>
+    <a class="nav-link" href="mailto:support@easeabroad.app">Contact</a>
     <a class="login" href="/app/">Log in</a>
+    <a class="nav-cta" href="/app/">Open app</a>
   </nav>
 </header>
+
+<div class="mobile-subnav" aria-label="Quick sections">
+  <a href="#features">✨ Features</a>
+  <a href="#events">🎟️ Live Events</a>
+  <a href="#tours">🎧 Audio Tours</a>
+  <a href="#agencies">🎁 Agencies</a>
+</div>
+
 <main>
+  <!-- HERO -->
   <section class="hero2">
-    <div>
-      <h1>Your pocket <span>travel guide</span></h1>
-      <p class="lead">EaseAbroad tells you the story of whatever is around you, walks you through self-guided audio tours and keeps every sight on one map, in any city.</p>
+    <div class="hero-copy">
+      <div class="eyebrow-pill">
+        <span class="dot"></span>
+        <span>AI Trip Planner · Live Events · GPS Audio Tours · Agency Gifting</span>
+      </div>
+      <h1>Plan your days, hear the stories &amp; catch <span>live events</span> in every city.</h1>
+      <p class="lead">EaseAbroad builds day-by-day itineraries with AI, narrates landmarks with hands-free walking tours, finds concerts and sports during your travel dates, and lets travel agencies gift trips directly to clients.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="/app/">Get started</a>
+        <a class="btn-primary" href="/app/">Get started — free on web</a>
         <span class="badge" aria-label="Coming soon to Google Play">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.3 12l-9.7 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#EA4335" d="M13.3 12 3.6 22.2c.3.2.8.2 1.3-.1l11.7-6.8z"/><path fill="#4285F4" d="M16.6 8.7 4.9 1.9c-.5-.3-1-.3-1.3-.1L13.3 12z"/></svg>
           <span><small>Coming soon to</small><b>Google Play</b></span>
         </span>
       </div>
+      <div class="hero-pills">
+        <a href="#events" class="pill-chip">🎟️ Ticketmaster &amp; SeatGeek Events</a>
+        <a href="#tours" class="pill-chip">🎧 Hands-Free Walking Tours</a>
+        <a href="#features" class="pill-chip">🗺️ Multi-City Day Map</a>
+        <a href="#agencies" class="pill-chip">🎁 Travel Agency Trip Gifting</a>
+      </div>
     </div>
-    <div class="phones" aria-hidden="true">
+
+    <div class="phones-stage" aria-label="EaseAbroad app screenshots">
       <div class="blob"></div>
-      <img src="/img/hero.jpg" alt="">
-      <img src="/img/hero-dark.jpg" alt="">
+      <figure class="phone-frame phone-left">
+        <img src="/img/trips.jpg" width="720" height="1600" alt="EaseAbroad My Trips screen showing Barcelona weekend, Autumn in Paris, and Lisbon trips">
+        <figcaption>My Trips</figcaption>
+      </figure>
+      <figure class="phone-frame phone-center">
+        <img src="/img/trip-detail.jpg" width="720" height="1600" alt="EaseAbroad Autumn in Paris trip detail with Plan Day 1 with AI and day chips">
+        <figcaption>AI Day Planner</figcaption>
+      </figure>
+      <figure class="phone-frame phone-right">
+        <img src="/img/events.jpg" width="720" height="1600" height="1600" alt="EaseAbroad Events screen showing concerts and sports in Paris with Ticketmaster links">
+        <figcaption>Live Events</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section id="features" class="features">
-    <article class="feature">
-      <div class="ico">🔊</div>
-      <h3>A guide that talks</h3>
-      <p>Tap Listen on any landmark, or let EaseAbroad narrate the places you walk past, based on where you are.</p>
-      <div class="phone"><img src="/img/listen.jpg" width="540" height="960" alt="Place detail screen with the Listen button"></div>
-    </article>
-    <article class="feature">
-      <div class="ico">🎧</div>
-      <h3>Guided walking tours</h3>
-      <p>Start a tour and keep your phone in your pocket: the story of each stop plays automatically as you arrive.</p>
-      <div class="phone"><img src="/img/tour.jpg" width="540" height="960" alt="Guided tour screen with numbered stops on a map"></div>
-    </article>
-    <article class="feature">
-      <div class="ico">🗺️</div>
-      <h3>Everything on one map</h3>
-      <p>Museums, monuments and hidden gems around you, in light or dark, with a day plan one tap away.</p>
-      <div class="phone"><img src="/img/map.jpg" width="540" height="960" alt="Explore map with nearby places"></div>
-    </article>
+  <!-- BENTO FEATURES GRID -->
+  <section id="features" class="section-block">
+    <div class="section-head">
+      <span class="section-tag">EVERYTHING IN ONE TRAVEL COMPANION</span>
+      <h2>From your first idea to every street corner you walk</h2>
+      <p>Real screens from the EaseAbroad app on Android and web — built around our Dusk Flight design for effortless day and night exploring.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card 1: AI Day-by-Day Planner (spans 2 columns on desktop) -->
+      <article class="bento-card bento-wide">
+        <div class="bento-text">
+          <div class="ico">✨</div>
+          <span class="card-kicker">AI ITINERARIES &amp; TIMED STOPS</span>
+          <h3>Plan every day with AI — or fine-tune stop by stop</h3>
+          <p>Add the cities you're visiting, pick your travel dates, and tap <strong>Plan with AI</strong> to generate a logical day-by-day route matched to your pace. Reorder stops, set arrival times like <code>09:30 Eiffel Tower</code>, and keep every day organized.</p>
+          <ul class="check-list">
+            <li>Multi-city trips with custom date ranges and day tabs</li>
+            <li>One-tap AI day planning tuned to your travel style</li>
+            <li>Timed itinerary stops with drag-and-drop ordering</li>
+          </ul>
+        </div>
+        <div class="bento-pair-phones">
+          <div class="phone-showcase">
+            <img src="/img/trip-detail.jpg" width="720" height="1600" loading="lazy" alt="Autumn in Paris trip overview with Plan Day 1 with AI button">
+          </div>
+          <div class="phone-showcase">
+            <img src="/img/itinerary.jpg" width="720" height="1600" loading="lazy" alt="Day 1 timed itinerary showing Eiffel Tower, Trocadero, Arc de Triomphe, and Louvre Museum">
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Audio Walking Tours & Listen -->
+      <article id="tours" class="bento-card">
+        <div class="bento-text">
+          <div class="ico">🎧</div>
+          <span class="card-kicker">SELF-GUIDED GPS AUDIO TOURS</span>
+          <h3>A pocket guide that talks as you walk</h3>
+          <p>Tap <strong>Listen</strong> on any landmark for an engaging narration, or tap <strong>Start guided tour</strong> and keep your phone in your pocket — the story of each stop plays automatically as you arrive.</p>
+        </div>
+        <div class="phone-showcase single">
+          <img src="/img/tour.jpg" width="720" height="1600" loading="lazy" alt="Louvre Museum detail screen with Listen and Start guided tour buttons">
+        </div>
+      </article>
+
+      <!-- Card 3: Interactive Day Map -->
+      <article class="bento-card">
+        <div class="bento-text">
+          <div class="ico">🗺️</div>
+          <span class="card-kicker">COLOR-CODED DAY MAP</span>
+          <h3>Every sight and day on one interactive map</h3>
+          <p>See all your planned stops numbered and color-coded by day across the city. Spot what's nearby so you never crisscross town unnecessarily.</p>
+        </div>
+        <div class="phone-showcase single">
+          <img src="/img/map.jpg" width="720" height="1600" loading="lazy" alt="Interactive Paris map with color-coded numbered pins for Days 1 to 4">
+        </div>
+      </article>
+
+      <!-- Card 4: Curated Recommendations -->
+      <article class="bento-card">
+        <div class="bento-text">
+          <div class="ico">🧭</div>
+          <span class="card-kicker">SMART DISCOVERY</span>
+          <h3>Curated sights, museums, food &amp; hidden gems</h3>
+          <p>Filter city recommendations by category, read practical visitor tips, and add places straight to any day of your trip in one tap.</p>
+        </div>
+        <div class="phone-showcase single">
+          <img src="/img/recommendations.jpg" width="720" height="1600" loading="lazy" alt="Recommendations screen with category filters and Add buttons">
+        </div>
+      </article>
+    </div>
   </section>
 
+  <!-- LIVE EVENTS SPOTLIGHT (Ticketmaster & SeatGeek) -->
+  <section id="events" class="events-spotlight">
+    <div class="events-content">
+      <span class="section-tag">🎟️ LIVE EVENTS · TICKETMASTER &amp; SEATGEEK</span>
+      <h2>Catch concerts, sports &amp; theater happening while you're in town</h2>
+      <p class="events-lead">Your trip dates automatically unlock live events in every city on your itinerary. Browse what's playing on <strong>Day 1</strong>, <strong>Day 2</strong>, or across your whole stay — filtered by <strong>Music</strong>, <strong>Sports</strong>, <strong>Arts</strong>, and <strong>Family</strong>.</p>
+
+      <div class="events-points">
+        <div class="event-point">
+          <span class="ep-icon">📅</span>
+          <div>
+            <h4>Matched to your exact cities &amp; dates</h4>
+            <p>No manual searching — switch between trip days to see shows at iconic venues near your itinerary stops.</p>
+          </div>
+        </div>
+        <div class="event-point">
+          <span class="ep-icon">🎫</span>
+          <div>
+            <h4>Official tickets &amp; price comparison</h4>
+            <p>Open verified listings on <strong>Ticketmaster</strong> or compare ticket deals on <strong>SeatGeek</strong> with one tap, and add the show directly to your day plan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="partner-row">
+        <span class="partner-badge">🎟️ Powered by Ticketmaster Discovery</span>
+        <span class="partner-badge">💺 Compare on SeatGeek</span>
+        <a class="btn-secondary" href="/app/">Explore events in the app →</a>
+      </div>
+    </div>
+
+    <div class="events-phone-wrap">
+      <div class="phone-showcase featured-phone">
+        <img src="/img/events.jpg" width="720" height="1600" loading="lazy" alt="EaseAbroad Events tab showing 281 events in Paris with category filters, Ticketmaster button, and Add to trip">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR TRAVEL AGENCIES & ADVISORS -->
+  <section id="agencies" class="agency-section">
+    <div class="agency-grid">
+      <div class="agency-copy">
+        <span class="agency-pill">🎁 FOR TRAVEL AGENCIES &amp; ADVISORS</span>
+        <h2>Curate bespoke client itineraries. Gift them in one click.</h2>
+        <p class="agency-lead">Replace static PDFs with a living pocket travel guide. Travel agencies use EaseAbroad to assemble multi-city trips — complete with AI day plans, timed stops, live event picks, and walking tours — and transfer ownership to their client by email.</p>
+
+        <div class="agency-steps">
+          <div class="agency-step">
+            <span class="step-num">1</span>
+            <div>
+              <h4>Build the trip with AI, places &amp; events</h4>
+              <p>Create a multi-city itinerary with timed daily stops, local tips, and concert or sports suggestions for your client's dates.</p>
+            </div>
+          </div>
+          <div class="agency-step">
+            <span class="step-num">2</span>
+            <div>
+              <h4>Gift trip ownership by email</h4>
+              <p>Send the trip to your client's email address — even before they sign up. Your client becomes the owner while your agency stays on as a collaborator for live updates.</p>
+            </div>
+          </div>
+          <div class="agency-step">
+            <span class="step-num">3</span>
+            <div>
+              <h4>Your client travels with audio tours &amp; maps</h4>
+              <p>They open the trip on Android or web with interactive day maps, live event ticket links, and hands-free GPS audio tours at every landmark.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="agency-actions">
+          <a class="btn-agency-primary" href="mailto:support@easeabroad.app?subject=EaseAbroad%20Travel%20Agency%20Account">Request an Agency Account</a>
+          <a class="btn-agency-outline" href="/app/">Open Web App</a>
+        </div>
+      </div>
+
+      <div class="agency-phone-col">
+        <div class="phone-showcase featured-phone">
+          <img src="/img/share.jpg" width="720" height="1600" loading="lazy" alt="EaseAbroad trip sharing and collaboration screen with Invite by email and Share link">
+        </div>
+        <p class="agency-caption">Real trip sharing &amp; collaborator handoff inside EaseAbroad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
   <section id="get" class="cta">
-    <h2>Open EaseAbroad in your browser</h2>
-    <p>The web app is live now. Google Play is coming soon. Questions, press or early access: <a href="mailto:support@easeabroad.app" style="color:#fff;font-weight:700">support@easeabroad.app</a></p>
+    <h2>Start planning your next trip today</h2>
+    <p>The EaseAbroad web app is live now, and Android is coming soon to Google Play. Questions, agency partnerships, or early access: <a href="mailto:support@easeabroad.app">support@easeabroad.app</a></p>
     <div class="cta-actions">
-      <a class="btn-primary" href="/app/">Open app</a>
-      <span class="badge"><span><small>Coming soon to</small><b>Google Play</b></span></span>
+      <a class="btn-primary" href="/app/">Open Web App</a>
+      <span class="badge" aria-label="Coming soon to Google Play">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.3 12l-9.7 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#EA4335" d="M13.3 12 3.6 22.2c.3.2.8.2 1.3-.1l11.7-6.8z"/><path fill="#4285F4" d="M16.6 8.7 4.9 1.9c-.5-.3-1-.3-1.3-.1L13.3 12z"/></svg>
+        <span><small>Coming soon to</small><b>Google Play</b></span>
+      </span>
     </div>
   </section>
 </main>
+
 <footer>
-  <span>© 2026 EaseAbroad</span>
-  <span>
+  <div class="footer-brand">
+    <span>© 2026 EaseAbroad · Pocket travel guide, live events &amp; agency trip planner</span>
+  </div>
+  <div class="footer-links" aria-label="Legal and support links">
     <a href="https://api.easeabroad.app/privacy/">Privacy</a> ·
     <a href="https://api.easeabroad.app/terms/">Terms</a> ·
     <a href="https://easeabroad.app/delete-account/">Delete account</a> ·
     <a href="mailto:support@easeabroad.app">support@easeabroad.app</a>
-  </span>
+  </div>
 </footer>
 </body>
 </html>
