@@ -1,0 +1,22 @@
+# EaseAbroad
+
+EaseAbroad is a travel-guide app that helps you plan day-by-day trips with AI, discover live events during your travel dates via Ticketmaster and SeatGeek, enjoy hands-free GPS audio walking tours, and gift client itineraries as a travel agency.
+
+## Key features
+
+- AI day-by-day trip planner
+- Live events matched to your travel dates (Ticketmaster & SeatGeek)
+- Hands-free GPS audio walking tours
+- Travel-agency trip gifting
+
+## Official URLs
+
+- Site: https://easeabroad.app/
+- Web app: https://easeabroad.app/app/
+- Google Play: https://play.google.com/store/apps/details?id=app.easeabroad
+- Support: support@easeabroad.app
+- Privacy: https://easeabroad.app/privacy/
+- Terms: https://easeabroad.app/terms/
+- Delete account: https://easeabroad.app/delete-account/
+
+Available on Android and the web.
