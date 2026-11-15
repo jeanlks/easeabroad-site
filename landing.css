@@ -1,40 +1,40 @@
-/* EaseAbroad Landing Page Stylesheet (Dusk Flight Design System) */
+/* EaseAbroad Landing Page Stylesheet (Stitch Midnight Sapphire & Azure Sky) */
 
 :root {
-  --df-indigo: #4B39C8;
-  --df-indigo-dark: #3B2AA0;
-  --df-magenta: #A8326F;
-  --df-coral: #FF5F4A;
-  --df-coral-deep: #C94A2A;
-  --grad: linear-gradient(135deg, #3B2AA0 0%, #A8326F 52%, #C94A2A 100%);
-  --grad-subtle: linear-gradient(135deg, rgba(59,42,160,0.08) 0%, rgba(168,50,111,0.06) 50%, rgba(201,74,42,0.08) 100%);
-  --grad-warm: linear-gradient(135deg, #FF8E5A 0%, #FF5F4A 50%, #C94A2A 100%);
-  --bg: #F8F7FC;
+  --df-indigo: #006194;
+  --df-indigo-dark: #004B73;
+  --df-magenta: #007BB9;
+  --df-coral: #FB7185;
+  --df-coral-deep: #B90538;
+  --grad: linear-gradient(135deg, #004B73 0%, #006194 52%, #B90538 100%);
+  --grad-subtle: linear-gradient(135deg, rgba(0,75,115,0.08) 0%, rgba(0,97,148,0.06) 50%, rgba(185,5,56,0.08) 100%);
+  --grad-warm: linear-gradient(135deg, #38BDF8 0%, #006194 50%, #B90538 100%);
+  --bg: #F8FAFC;
   --surface: #FFFFFF;
-  --surface-2: #F0EDFA;
-  --surface-hover: #E9E4F7;
-  --border: #DEDAF0;
-  --border-subtle: #E8E5F3;
-  --ink: #161233;
-  --muted: #5F5B7A;
-  --muted-light: #7E7A99;
-  --phone-bezel: #161226;
-  --card-shadow: 0 14px 34px rgba(35, 20, 60, 0.08);
-  --phone-shadow: 0 24px 50px rgba(30, 15, 60, 0.22);
+  --surface-2: #EAEDFF;
+  --surface-hover: #E2E7FD;
+  --border: #BFC7D2;
+  --border-subtle: #DDE2F7;
+  --ink: #151B2B;
+  --muted: #3F4850;
+  --muted-light: #5B6470;
+  --phone-bezel: #0D1322;
+  --card-shadow: 0 14px 34px rgba(13, 19, 34, 0.08);
+  --phone-shadow: 0 24px 50px rgba(13, 19, 34, 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0B0A1C;
-    --surface: #15132C;
-    --surface-2: #1E1B3D;
-    --surface-hover: #27234F;
-    --border: #2C2852;
-    --border-subtle: #211E42;
-    --ink: #F2EFFC;
-    --muted: #A39EC4;
-    --muted-light: #7E7A99;
-    --phone-bezel: #080714;
+    --bg: #0D1322;
+    --surface: #151B2B;
+    --surface-2: #1E293B;
+    --surface-hover: #263449;
+    --border: #334155;
+    --border-subtle: #1E293B;
+    --ink: #F8FAFC;
+    --muted: #CBD5E1;
+    --muted-light: #94A3B8;
+    --phone-bezel: #070B14;
     --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
     --phone-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
   }
