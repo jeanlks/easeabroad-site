@@ -24,8 +24,6 @@
       html,
       body {
         height: 100%;
-        height: 100dvh;
-        height: -webkit-fill-available;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -36,15 +34,6 @@
         body {
           background-color: #151B2B;
         }
-      }
-      body {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        height: 100dvh;
-        height: -webkit-fill-available;
-        overflow: hidden;
       }
       /* These styles disable body scrolling if you are using <ScrollView> */
       body {
@@ -57,33 +46,14 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 100%;
-        height: 100%;
-        height: 100dvh;
-        height: -webkit-fill-available;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
       }
-      #root,
-      #root > div,
-      #root > div > div,
-      #root > div > div > div,
-      #root > div > div > div > div,
-      #root > div > div > div > div > div,
-      #root [data-testid="web-app-shell"],
-      #root [data-testid="web-app-shell"] > div {
-        display: flex !important;
-        flex: 1 1 0% !important;
-        flex-direction: column !important;
-        height: 100% !important;
-        width: 100% !important;
-        min-height: 0 !important;
-      }
-      [data-testid="bottom-tab-bar"] {
-        flex-shrink: 0 !important;
-        margin-top: auto !important;
-        width: 100% !important;
+      #root, #root > div, #root > div > div {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
       }
     </style>
   <meta name="description" content="Plan trips, pick places, and see events near you.">
@@ -96,6 +66,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/app/_expo/static/js/web/index-b56641c30e5949111dac2db65a0fd1d0.js" defer></script>
+  <script src="/app/_expo/static/js/web/index-6f556dd61156846b140c10804c66827b.js" defer></script>
 </body>
 </html>
