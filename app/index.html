@@ -24,6 +24,8 @@
       html,
       body {
         height: 100%;
+        height: 100dvh;
+        height: -webkit-fill-available;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -46,6 +48,10 @@
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100%;
+        height: 100%;
+        height: 100dvh;
+        height: -webkit-fill-available;
         display: flex;
         flex-direction: column;
       }
@@ -54,6 +60,17 @@
         flex: 1;
         flex-direction: column;
         height: 100%;
+      }
+      [data-testid="bottom-tab-bar"] {
+        padding-bottom: max(env(safe-area-inset-bottom, 0px), 8px) !important;
+        padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+      @supports not (height: 100dvh) {
+        @media screen and (max-width: 767px) {
+          [data-testid="bottom-tab-bar"] {
+            padding-bottom: calc(65px + env(safe-area-inset-bottom, 0px)) !important;
+          }
+        }
       }
     </style>
   <meta name="description" content="Plan trips, pick places, and see events near you.">
@@ -66,6 +83,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/app/_expo/static/js/web/index-6f556dd61156846b140c10804c66827b.js" defer></script>
+  <script src="/app/_expo/static/js/web/index-6a104e122d4198c4f5be0223771ca61e.js" defer></script>
 </body>
 </html>
