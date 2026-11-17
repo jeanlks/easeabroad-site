@@ -136,7 +136,7 @@ self.addEventListener('fetch', (event) => {
   // 4. HTML Navigation: Network-First with Cache Fallback
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request)
+      fetch(request, { cache: 'no-store' })
         .then((response) => {
           if (response && response.status === 200) {
             const copy = response.clone();
