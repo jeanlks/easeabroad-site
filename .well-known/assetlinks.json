@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.easeabroad",
+      "sha256_cert_fingerprints": [
+        "33:E9:D8:12:55:0A:F5:75:E9:E6:B1:1B:C5:B0:96:22:69:45:98:E3:0B:3A:54:4E:80:55:18:24:12:5F:37:3B",
+        "58:A6:B6:DE:0F:11:CD:F1:0F:ED:97:16:80:CF:BD:A8:6D:BF:9E:1F:51:5A:B0:88:57:F5:AD:9C:15:25:17:F5"
+      ]
+    }
+  }
+]
