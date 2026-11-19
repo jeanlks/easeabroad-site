@@ -297,7 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="agency-actions">
-          <a class="btn-agency-primary" href="mailto:support@easeabroad.app?subject=EaseAbroad%20Travel%20Agency%20Account">Request an Agency Account</a>
+          <button type="button" class="btn-agency-primary" onclick="openAgencyModal()">Request an Agency Account</button>
           <a class="btn-agency-outline" href="/app/">Open Web App</a>
         </div>
       </div>
@@ -336,5 +336,137 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="mailto:support@easeabroad.app">support@easeabroad.app</a>
   </div>
 </footer>
+
+<!-- Agency Lead Capture Modal -->
+<div id="agency-modal" style="display:none; position:fixed; inset:0; background:rgba(10,15,26,0.85); backdrop-filter:blur(8px); z-index:99999; align-items:center; justify-content:center; padding:16px;">
+  <div style="background:#0f172a; border:1px solid #1e293b; border-radius:18px; max-width:500px; width:100%; padding:28px; box-shadow:0 25px 60px -15px rgba(0,0,0,0.8); position:relative; color:#f8fafc; font-family:var(--font-sans, -apple-system, sans-serif);">
+    <button onclick="closeAgencyModal()" style="position:absolute; top:18px; right:18px; background:none; border:none; color:#94a3b8; font-size:20px; cursor:pointer; padding:4px;" aria-label="Close modal">✕</button>
+
+    <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#38bdf8; margin-bottom:6px;">Travel Agencies &amp; Advisors</div>
+    <h3 style="font-size:22px; font-weight:800; color:#ffffff; margin:0 0 6px 0; letter-spacing:-0.02em;">Request an Agency Account</h3>
+    <p style="font-size:13px; color:#94a3b8; margin:0 0 20px 0; line-height:1.5;">Curate bespoke itineraries with AI day plans &amp; GPS audio walking tours, and gift them directly to clients with your agency as co-planner.</p>
+
+    <form id="agency-lead-form" onsubmit="handleAgencyLeadSubmit(event)">
+      <div style="margin-bottom:12px;">
+        <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Full Name *</label>
+        <input id="agency-lead-name" type="text" required placeholder="e.g. Jane Doe"
+          style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none;">
+      </div>
+      <div style="margin-bottom:12px;">
+        <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Work Email *</label>
+        <input id="agency-lead-email" type="email" required placeholder="jane@voyageluxe.com"
+          style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none;">
+      </div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:12px;">
+        <div>
+          <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Agency / Company</label>
+          <input id="agency-lead-company" type="text" placeholder="Voyage Luxe Travel"
+            style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none;">
+        </div>
+        <div>
+          <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Website</label>
+          <input id="agency-lead-website" type="text" placeholder="voyageluxe.com"
+            style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none;">
+        </div>
+      </div>
+      <div style="margin-bottom:12px;">
+        <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Estimated Clients Per Year</label>
+        <select id="agency-lead-volume" style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none;">
+          <option value="1-25">1 – 25 clients</option>
+          <option value="25-100" selected>25 – 100 clients</option>
+          <option value="100-500">100 – 500 clients</option>
+          <option value="500+">500+ clients</option>
+        </select>
+      </div>
+      <div style="margin-bottom:18px;">
+        <label style="display:block; font-size:12px; font-weight:600; color:#cbd5e1; margin-bottom:4px;">Notes / Typical Destinations</label>
+        <textarea id="agency-lead-notes" rows="2" placeholder="Tell us about the kinds of trips or destinations you plan..."
+          style="width:100%; box-sizing:border-box; background:#1e293b; border:1px solid #334155; color:#f8fafc; padding:10px 14px; border-radius:8px; font-size:14px; outline:none; font-family:inherit;"></textarea>
+      </div>
+
+      <div id="agency-lead-msg" style="display:none; font-size:13px; padding:10px 14px; border-radius:8px; margin-bottom:14px;"></div>
+
+      <button id="agency-lead-submit-btn" type="submit" class="btn-agency-primary" style="width:100%; border:none; cursor:pointer; font-size:15px; font-weight:700; padding:12px;">
+        Submit Agency Request &rarr;
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openAgencyModal() {
+    const modal = document.getElementById('agency-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function closeAgencyModal() {
+    const modal = document.getElementById('agency-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  async function handleAgencyLeadSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('agency-lead-submit-btn');
+    const msg = document.getElementById('agency-lead-msg');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    const payload = {
+      name: document.getElementById('agency-lead-name').value,
+      email: document.getElementById('agency-lead-email').value,
+      agencyName: document.getElementById('agency-lead-company').value,
+      website: document.getElementById('agency-lead-website').value,
+      clientVolume: document.getElementById('agency-lead-volume').value,
+      notes: document.getElementById('agency-lead-notes').value,
+    };
+
+    try {
+      const res = await fetch('https://api.easeabroad.app/leads/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (res.ok && data.status === 'ok') {
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'agency_leads',
+            event_label: payload.clientVolume || 'standard'
+          });
+        }
+        msg.textContent = '✅ ' + (data.message || 'Thank you! Your agency inquiry has been submitted.');
+        msg.style.background = 'rgba(16, 185, 129, 0.15)';
+        msg.style.border = '1px solid #10b981';
+        msg.style.color = '#34d399';
+        msg.style.display = 'block';
+        document.getElementById('agency-lead-form').reset();
+        setTimeout(() => {
+          closeAgencyModal();
+          msg.style.display = 'none';
+        }, 4000);
+      } else {
+        msg.textContent = '❌ ' + (data.error || data.message || 'Submission failed. Please try again.');
+        msg.style.background = 'rgba(239, 68, 68, 0.15)';
+        msg.style.border = '1px solid #ef4444';
+        msg.style.color = '#f87171';
+        msg.style.display = 'block';
+      }
+    } catch (err) {
+      msg.textContent = 'Connection error: ' + err.message;
+      msg.style.background = 'rgba(239, 68, 68, 0.15)';
+      msg.style.border = '1px solid #ef4444';
+      msg.style.color = '#f87171';
+      msg.style.display = 'block';
+    } finally {
+      btn.textContent = 'Submit Agency Request →';
+      btn.disabled = false;
+    }
+  }
+
+  // Close modal when clicking outside backdrop
+  document.getElementById('agency-modal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeAgencyModal();
+  });
+</script>
 </body>
 </html>
