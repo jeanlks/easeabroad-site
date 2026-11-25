@@ -1072,7 +1072,7 @@ html {
 /* Standalone PWA & iOS status bar inheritance */
 @media all and (display-mode: standalone) {
   html {
-    background-color: #3B2AA0;
+    background-color: #006194;
   }
   .lp header {
     background: var(--grad);
@@ -1100,16 +1100,16 @@ html {
 
 @media all and (display-mode: standalone) and (prefers-color-scheme: dark) {
   html {
-    background-color: #0B0A1C;
+    background-color: #0D1322;
   }
 }
 
 .ios-standalone html {
-  background-color: #3B2AA0;
+  background-color: #006194;
 }
 @media (prefers-color-scheme: dark) {
   .ios-standalone html {
-    background-color: #0B0A1C;
+    background-color: #0D1322;
   }
 }
 .ios-standalone .lp header {
