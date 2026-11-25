@@ -1,12 +1,12 @@
 {
   "name": "EaseAbroad",
   "short_name": "EaseAbroad",
-  "description": "Plan trips, pick places, and see events near you.",
+  "description": "AI trip planner for 400+ cities, live events, audio tours, and agency gifting.",
   "start_url": "/app/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#1A1640",
-  "theme_color": "#4B39C8",
+  "background_color": "#080E1D",
+  "theme_color": "#006194",
   "icons": [
     {
       "src": "/apple-touch-icon.png",
