@@ -1,0 +1,30 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "NTJCR9E3EY.app.easeabroad",
+        "paths": [
+          "/app",
+          "/app/*"
+        ],
+        "appIDs": [
+          "NTJCR9E3EY.app.easeabroad"
+        ],
+        "components": [
+          {
+            "/": "/app"
+          },
+          {
+            "/": "/app/*"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "NTJCR9E3EY.app.easeabroad"
+    ]
+  }
+}
